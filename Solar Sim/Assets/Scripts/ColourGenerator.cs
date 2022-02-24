@@ -14,7 +14,7 @@ public class ColourGenerator
         this.settings = settings;
         if (texture == null || texture.height != settings.biomeColourSettings.biomes.Length)
         {
-            texture = new Texture2D(textureResolution, settings.biomeColourSettings.biomes.Length);
+            texture = new Texture2D(textureResolution, settings.biomeColourSettings.biomes.Length, TextureFormat.RGBA32, false);
         }
         biomeNoiseFilter = NoiseFilterFactory.CreateNoiseFilter(settings.biomeColourSettings.noise);
     }
